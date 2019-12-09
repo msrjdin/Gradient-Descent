@@ -25,8 +25,6 @@ class GD:
 		self.minStepSize=minStepSize
 
 		
-
-	
 	def costFunction(self):
 		cost=0
 		for j in range(len(self.y_obs)):
@@ -83,7 +81,7 @@ class GD:
 		return [self.coeff,costPoints, CFS]
 	
 df=pd.read_csv('data.txt')
-g=GD(1, df['y'], df[['f1']], 0.01, 1000, 0.0001,intercept=True)
+g=GD(1, df['y'], df[['f1']], .1, 1000, 0.0001,intercept=True)
 coefficients,costPoints, CFS=g.descent()
 print(coefficients)
 #print(pd.DataFrame(CFS))
