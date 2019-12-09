@@ -84,22 +84,11 @@ df=pd.read_csv('data.txt')
 g=GD(1, df['y'], df[['f1']], .1, 1000, 0.0001,intercept=True)
 coefficients,costPoints, CFS=g.descent()
 print(coefficients)
-#print(pd.DataFrame(CFS))
-#print(costPoints)
 plt.plot(pd.DataFrame(CFS)[0], costPoints)
 				
 					
-			
-#function = lambda x: (x ** 3)-(3 *(x ** 2))+7
-
-#Get 1000 evenly spaced numbers between -1 and 3 (arbitratil chosen to ensure steep curve)
-#x = np.linspace(-1,3,500)
-
-#Plot the curve
-
+		
 plt.show()
 	
-	
-	
-	
+
 	
